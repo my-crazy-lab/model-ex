@@ -1,0 +1,170 @@
+{
+  "name": "super-app",
+  "version": "1.0.0",
+  "description": "React Native Super App with Module Federation",
+  "main": "index.js",
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "repack:start": "react-native webpack-start",
+    "repack:bundle": "react-native webpack-bundle",
+    "build": "react-native webpack-bundle --platform android --dev false",
+    "build:ios": "react-native webpack-bundle --platform ios --dev false",
+    "build:android": "react-native webpack-bundle --platform android --dev false",
+    "build:prod": "npm run build:ios && npm run build:android",
+    "build:mini-app": "node scripts/build-mini-app.js",
+    "create-mini-app": "node scripts/create-mini-app.js",
+    "deploy:mini-app": "node scripts/deploy-mini-app.js",
+    "e2e:build": "detox build --configuration ios.sim.debug",
+    "e2e:test": "detox test --configuration ios.sim.debug",
+    "e2e:ios": "npm run e2e:build && npm run e2e:test",
+    "e2e:android": "detox test --configuration android.emu.debug",
+    "postinstall": "cd ios && pod install && cd ..",
+    "clean": "react-native clean-project-auto",
+    "reset-cache": "react-native start --reset-cache",
+    "flipper": "open /Applications/Flipper.app",
+    "generate-icons": "react-native set-icon --path ./assets/icon.png",
+    "generate-splash": "react-native generate-bootsplash ./assets/splash.png"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.19.0",
+    "@react-native-community/netinfo": "^9.4.0",
+    "@react-navigation/bottom-tabs": "^6.5.0",
+    "@react-navigation/drawer": "^6.6.0",
+    "@react-navigation/native": "^6.1.0",
+    "@react-navigation/native-stack": "^6.9.0",
+    "@react-navigation/stack": "^6.3.0",
+    "@reduxjs/toolkit": "^1.9.0",
+    "@shopify/react-native-skia": "^0.1.0",
+    "react": "18.2.0",
+    "react-native": "0.72.0",
+    "react-native-animatable": "^1.3.0",
+    "react-native-biometrics": "^3.0.0",
+    "react-native-bootsplash": "^4.7.0",
+    "react-native-config": "^1.5.0",
+    "react-native-device-info": "^10.8.0",
+    "react-native-fast-image": "^8.6.0",
+    "react-native-gesture-handler": "^2.12.0",
+    "react-native-keychain": "^8.1.0",
+    "react-native-linear-gradient": "^2.8.0",
+    "react-native-mmkv": "^2.10.0",
+    "react-native-orientation-locker": "^1.5.0",
+    "react-native-paper": "^5.9.0",
+    "react-native-permissions": "^3.8.0",
+    "react-native-push-notification": "^8.1.0",
+    "react-native-reanimated": "^3.3.0",
+    "react-native-safe-area-context": "^4.7.0",
+    "react-native-screens": "^3.22.0",
+    "react-native-svg": "^13.10.0",
+    "react-native-vector-icons": "^10.0.0",
+    "react-native-webview": "^13.2.0",
+    "react-redux": "^8.1.0",
+    "redux-persist": "^6.0.0",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@callstack/repack": "^3.2.0",
+    "@react-native/eslint-config": "^0.72.0",
+    "@react-native/metro-config": "^0.72.0",
+    "@testing-library/jest-native": "^5.4.0",
+    "@testing-library/react-native": "^12.1.0",
+    "@types/jest": "^29.5.0",
+    "@types/react": "^18.2.0",
+    "@types/react-native": "^0.72.0",
+    "@types/react-test-renderer": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "babel-jest": "^29.5.0",
+    "detox": "^20.10.0",
+    "eslint": "^8.19.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.0.0",
+    "jest": "^29.5.0",
+    "metro-react-native-babel-preset": "0.76.0",
+    "prettier": "^3.0.0",
+    "react-test-renderer": "18.2.0",
+    "typescript": "^5.1.0",
+    "webpack": "^5.88.0"
+  },
+  "resolutions": {
+    "@types/react": "^18.2.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|@react-native|@react-navigation|react-native-vector-icons|react-native-reanimated|@callstack/repack)/)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/**/__tests__/**",
+      "!src/**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "detox": {
+    "testRunner": "jest",
+    "runnerConfig": "e2e/config.json",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/SuperApp.app",
+        "build": "xcodebuild -workspace ios/SuperApp.xcworkspace -scheme SuperApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 14"
+        }
+      },
+      "android.emu.debug": {
+        "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+        "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+        "type": "android.emulator",
+        "device": {
+          "avdName": "Pixel_4_API_30"
+        }
+      }
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "react-native",
+    "super-app",
+    "module-federation",
+    "repack",
+    "micro-frontend",
+    "mini-app"
+  ],
+  "author": "Super App Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/super-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/super-app/issues"
+  },
+  "homepage": "https://github.com/your-org/super-app#readme"
+}

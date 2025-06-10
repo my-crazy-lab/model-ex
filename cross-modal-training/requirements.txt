@@ -1,0 +1,108 @@
+# Core ML and DL libraries
+torch>=1.12.0
+torchvision>=0.13.0
+torchaudio>=0.12.0
+transformers>=4.20.0
+datasets>=2.0.0
+accelerate>=0.20.0
+evaluate>=0.4.0
+
+# Multi-modal specific libraries
+timm>=0.6.0
+clip-by-openai>=1.0
+open-clip-torch>=2.0.0
+sentence-transformers>=2.2.0
+
+# Image processing
+Pillow>=9.0.0
+opencv-python>=4.5.0
+imageio>=2.19.0
+scikit-image>=0.19.0
+
+# Audio processing
+librosa>=0.9.0
+soundfile>=0.10.0
+audioread>=2.1.0
+resampy>=0.3.0
+
+# Video processing
+decord>=0.6.0
+av>=9.0.0
+
+# Data manipulation and analysis
+numpy>=1.21.0
+pandas>=1.4.0
+scipy>=1.8.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.8.0
+bokeh>=2.4.0
+
+# Metrics and evaluation
+scikit-learn>=1.1.0
+nltk>=3.7
+rouge-score>=0.1.0
+sacrebleu>=2.0.0
+pycocotools>=2.0.0
+
+# Utilities
+tqdm>=4.64.0
+requests>=2.27.0
+pyyaml>=6.0
+python-dotenv>=0.20.0
+wandb>=0.12.0
+tensorboard>=2.9.0
+
+# Jupyter and notebook support
+jupyter>=1.0.0
+ipykernel>=6.13.0
+notebook>=6.4.0
+ipywidgets>=7.7.0
+
+# Web framework for demos
+streamlit>=1.10.0
+gradio>=3.0.0
+flask>=2.1.0
+fastapi>=0.78.0
+uvicorn>=0.17.0
+
+# Parameter-efficient fine-tuning
+peft>=0.3.0
+loralib>=0.1.0
+
+# Distributed training
+deepspeed>=0.7.0
+
+# Testing
+pytest>=7.1.0
+pytest-cov>=3.0.0
+pytest-mock>=3.7.0
+
+# Code quality
+black>=22.3.0
+flake8>=4.0.0
+isort>=5.10.0
+mypy>=0.950
+
+# Documentation
+sphinx>=4.5.0
+sphinx-rtd-theme>=1.0.0
+
+# Optional: Advanced features
+# faiss-cpu>=1.7.0          # For efficient similarity search
+# faiss-gpu>=1.7.0          # GPU version of FAISS
+# onnx>=1.12.0              # For model optimization
+# onnxruntime>=1.12.0       # ONNX runtime
+# tensorrt>=8.4.0           # TensorRT optimization (NVIDIA)
+
+# Optional: Additional multi-modal libraries
+# lavis>=1.0.0              # BLIP and other models
+# mmcv-full>=1.6.0          # OpenMMLab computer vision
+# mmdet>=2.25.0             # Object detection
+# mmsegmentation>=0.29.0    # Semantic segmentation
+
+# Development dependencies
+pre-commit>=2.19.0
+jupyter-contrib-nbextensions>=0.5.0

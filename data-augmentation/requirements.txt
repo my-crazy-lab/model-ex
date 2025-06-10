@@ -1,0 +1,67 @@
+# Data Augmentation & Synthetic Data Generation Requirements
+
+# Core dependencies
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.12.0
+numpy>=1.24.0
+
+# Text augmentation libraries
+nlpaug>=1.1.11
+textattack>=0.3.8
+augmenty>=1.4.0
+
+# Language processing
+nltk>=3.8
+spacy>=3.6.0
+wordnet>=0.0.1b2
+
+# Translation for back-translation
+googletrans>=4.0.0
+deep-translator>=1.11.0
+
+# LLM APIs
+openai>=0.27.0
+anthropic>=0.3.0
+
+# Quality assessment
+sentence-transformers>=2.2.0
+evaluate>=0.4.0
+rouge-score>=0.1.2
+sacrebleu>=2.3.0
+
+# Data processing
+pandas>=2.0.0
+scikit-learn>=1.3.0
+scipy>=1.10.0
+
+# Visualization and monitoring
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.0.0
+wandb>=0.15.0
+tensorboard>=2.13.0
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0
+jsonlines>=3.1.0
+
+# Development and testing
+pytest>=7.0.0
+jupyter>=1.0.0
+black>=22.0.0
+flake8>=4.0.0
+
+# Optional for specific augmentation types
+# TTS and audio
+# tts>=0.15.0
+# librosa>=0.10.0
+
+# Image generation (optional)
+# diffusers>=0.18.0
+# pillow>=9.5.0
+
+# Advanced NLP
+# flair>=0.12.0
+# allennlp>=2.10.0

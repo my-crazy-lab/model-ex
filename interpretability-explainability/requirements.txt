@@ -1,0 +1,87 @@
+# Core ML and DL libraries
+torch>=1.12.0
+torchvision>=0.13.0
+transformers>=4.20.0
+datasets>=2.0.0
+scikit-learn>=1.1.0
+numpy>=1.21.0
+pandas>=1.4.0
+
+# Interpretability libraries
+lime>=0.2.0.1
+shap>=0.41.0
+captum>=0.5.0
+bertviz>=1.4.0
+
+# Visualization libraries
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.8.0
+bokeh>=2.4.0
+ipywidgets>=7.7.0
+
+# Image processing
+Pillow>=9.0.0
+opencv-python>=4.5.0
+imageio>=2.19.0
+
+# Text processing
+nltk>=3.7
+spacy>=3.4.0
+textblob>=0.17.0
+
+# Web framework for dashboard
+streamlit>=1.10.0
+dash>=2.5.0
+flask>=2.1.0
+
+# Jupyter and notebook support
+jupyter>=1.0.0
+ipykernel>=6.13.0
+notebook>=6.4.0
+
+# Data manipulation and analysis
+scipy>=1.8.0
+statsmodels>=0.13.0
+
+# Model serving and deployment
+fastapi>=0.78.0
+uvicorn>=0.17.0
+
+# Utilities
+tqdm>=4.64.0
+requests>=2.27.0
+pyyaml>=6.0
+python-dotenv>=0.20.0
+
+# Testing
+pytest>=7.1.0
+pytest-cov>=3.0.0
+pytest-mock>=3.7.0
+
+# Code quality
+black>=22.3.0
+flake8>=4.0.0
+isort>=5.10.0
+mypy>=0.950
+
+# Documentation
+sphinx>=4.5.0
+sphinx-rtd-theme>=1.0.0
+
+# Optional: GPU acceleration
+# torch-audio>=0.12.0  # Uncomment if needed
+# torch-text>=0.13.0   # Uncomment if needed
+
+# Optional: Advanced visualization
+# graphviz>=0.20.0     # Uncomment for decision tree visualization
+# networkx>=2.8.0      # Uncomment for graph visualization
+
+# Optional: Additional explainability tools
+# eli5>=0.13.0         # Uncomment for additional explanations
+# alibi>=0.9.0         # Uncomment for Alibi explanations
+# interpret>=0.3.0     # Uncomment for Microsoft InterpretML
+
+# Development dependencies
+pre-commit>=2.19.0
+jupyter-contrib-nbextensions>=0.5.0
