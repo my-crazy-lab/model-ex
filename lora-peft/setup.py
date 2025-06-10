@@ -13,7 +13,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="lora-peft",
     version="0.1.0",
-    author="Model-Ex Team",
+    author="MinhLee",
     description="Parameter-Efficient Fine-Tuning implementation with LoRA",
     long_description=long_description,
     long_description_content_type="text/markdown",

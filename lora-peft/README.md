@@ -1,6 +1,6 @@
 # LoRA/PEFT Implementation
 
-This project implements Parameter-Efficient Fine-Tuning (PEFT) using LoRA (Low-Rank Adaptation) based on the checklist in `fine-tuning/LoRA - PEFT.md`.
+This project implements Parameter-Efficient Fine-Tuning (PEFT) using LoRA (Low-Rank Adaptation) based on the checklist in `LoRA - PEFT.md`.
 
 ## 📋 Complete Implementation Checklist
 
